@@ -1,0 +1,137 @@
+*{
+    padding:0 ;
+    margin: 0;
+}
+body{
+    overflow:hidden  ;
+}
+.wrapper{
+    background-image: url(./assets/sky.jpg);
+    height: 100vh;
+    width: 100vw;
+}
+
+.highway{
+    background-image: url(./assets/highway.png);
+    position: absolute;
+    bottom: 0px;
+    width: 200%;
+    height: 230px;
+    animation-name: highway;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    /* animation-direction: alternate; */
+}
+
+@keyframes highway {
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.city{
+    background-image:url(./assets/city_alt.png) ;
+    position: absolute;
+    bottom: 230px;
+    height: 450px;
+    width: 170%;
+    animation-name: city;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes city {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-25%);
+    }
+    
+}
+
+.car{
+    /* background-image: url(./assets/car.png); */
+    position: absolute;
+    bottom: 129px;
+    height: 300px;
+    width: 700px;
+    left: 454px;
+    animation-name: car;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes car {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(13px);
+    }
+}
+
+.car img{
+    
+    height: 346px;
+    width: 691px;
+}
+
+.wheel{
+    position: absolute;
+    bottom: 129px;
+}
+
+.wheel img{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    bottom: 19px;
+    animation-name: wheel;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes wheel {
+    from{
+        transform:translateY(0px) rotate(0deg);
+    }
+    to{
+        transform:translateY(12px) rotate(360deg);
+    }
+}
+.front_wheel{
+    left: 910px;
+}
+.rear_wheel{
+    left:579px;
+}
+
+.superman{
+    position: absolute;
+    animation-name: super;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    top: 75px;
+}
+@keyframes super {
+
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(100vw) ;
+    }
+    
+}
+
+.superman img{
+    height: 184px;
+}
